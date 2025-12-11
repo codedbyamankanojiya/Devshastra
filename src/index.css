@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode (Start-up / Enterprise Clean) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f6fc;
+  /* Subtle cool gray/blue tint */
+  --bg-tertiary: #e2e8f0;
+  /* Slate 200 */
+
+  --text-primary: #111827;
+  /* Gray 900 - Sharp */
+  --text-secondary: #4b5563;
+  /* Gray 600 - Readable */
+
+  --accent-primary: #0284c7;
+  /* Sky 600 - Trustworthy Blue */
+  --accent-secondary: #4f46e5;
+  /* Indigo 600 - Innovation */
+
+  /* RGBs for opacity */
+  --bg-primary-rgb: 255, 255, 255;
+  --bg-secondary-rgb: 243, 246, 252;
+
+  --glass-border: rgba(2, 132, 199, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.04);
+
+  --orb-1: rgba(79, 70, 229, 0.4);
+  --orb-2: rgba(2, 132, 199, 0.4);
+  --orb-3: rgba(241, 245, 249, 0.8);
+}
+
+.dark {
+  /* Dark Mode (High-Tech / Premium) */
+  --bg-primary: #0b1121;
+  /* Richer, darker navy */
+  --bg-secondary: #151e32;
+  /* Slightly lighter navy */
+  --bg-tertiary: #1e293b;
+  /* Slate 800 */
+
+  --text-primary: #f8fafc;
+  /* Slate 50 */
+  --text-secondary: #94a3b8;
+  /* Slate 400 */
+
+  --accent-primary: #38bdf8;
+  /* Sky 400 */
+  --accent-secondary: #818cf8;
+  /* Indigo 400 */
+
+  /* RGBs for opacity */
+  --bg-primary-rgb: 11, 17, 33;
+  --bg-secondary-rgb: 21, 30, 50;
+
+  --glass-border: rgba(56, 189, 248, 0.15);
+  --glass-shadow: rgba(0, 0, 0, 0.4);
+
+  --orb-1: rgba(99, 102, 241, 0.2);
+  --orb-2: rgba(14, 165, 233, 0.2);
+  --orb-3: rgba(15, 23, 42, 0.6);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom Scrollbar - Sleeker */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Nebula Background - Refined & Subtle */
+.nebula-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg-primary);
+  transition: background 0.5s ease;
+}
+
+.nebula-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  /* Softened blur */
+  opacity: 0.5;
+  animation: float 25s infinite ease-in-out;
+  transition: background 0.5s ease;
+}
+
+.orb-1 {
+  top: -15%;
+  left: -5%;
+  width: 45vw;
+  height: 45vw;
+  background: var(--orb-1);
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  bottom: -20%;
+  right: -10%;
+  width: 55vw;
+  height: 55vw;
+  background: var(--orb-2);
+  animation-delay: -7s;
+}
+
+.orb-3 {
+  top: 35%;
+  left: 30%;
+  width: 40vw;
+  height: 40vw;
+  background: var(--orb-3);
+  animation-delay: -15s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(25px, 40px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-20px, 15px) scale(0.95);
+  }
+}
+
+/* Professional Glassmorphism */
+/* Panel: For larger sections, forms */
+.glass-panel {
+  background: rgba(var(--bg-primary-rgb), 0.75);
+  /* More opaque for readability */
+  backdrop-filter: blur(16px);
+  /* Stronger blur for premium feel */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card: For items, grids */
+.glass-card {
+  background: rgba(var(--bg-secondary-rgb), 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 6px -1px var(--glass-shadow), 0 2px 4px -1px var(--glass-shadow);
+  /* Tailwind-like shadow */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(var(--bg-secondary-rgb), 0.85);
+  border-color: var(--accent-primary);
+  box-shadow: 0 20px 25px -5px var(--glass-shadow), 0 10px 10px -5px var(--glass-shadow);
+  transform: translateY(-4px);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+  /* Tighter tracking for headings */
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* Hide scrollbar utility for mobile horizontal scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
