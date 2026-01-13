@@ -88,7 +88,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`block px-4 py-3 rounded-lg text-text-secondary hover:text-accent-primary hover:bg-white/5 transition-all duration-300 ${location.pathname === link.path ? 'text-accent-primary bg-white/10' : ''
+              className={`block px-4 py-3 rounded-lg text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
                 }`}
             >
               {link.name}

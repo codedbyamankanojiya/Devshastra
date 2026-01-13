@@ -7,24 +7,30 @@
 :root {
   /* Light Mode (Start-up / Enterprise Clean) */
   --bg-primary: #ffffff;
-  --bg-secondary: #f3f6fc;
-  /* Subtle cool gray/blue tint */
-  --bg-tertiary: #e2e8f0;
-  /* Slate 200 */
+  --bg-secondary: #f7f7f7;
+  /* Neutral, true-white adjacent */
+  --bg-tertiary: #ededed;
+  /* Neutral surface */
+
 
   --text-primary: #111827;
   /* Gray 900 - Sharp */
   --text-secondary: #4b5563;
   /* Gray 600 - Readable */
 
+
   --accent-primary: #0284c7;
   /* Sky 600 - Trustworthy Blue */
   --accent-secondary: #4f46e5;
   /* Indigo 600 - Innovation */
 
+  --accent-primary-rgb: 2, 132, 199;
+
+
   /* RGBs for opacity */
   --bg-primary-rgb: 255, 255, 255;
-  --bg-secondary-rgb: 243, 246, 252;
+  --bg-secondary-rgb: 247, 247, 247;
+
 
   --glass-border: rgba(2, 132, 199, 0.08);
   --glass-shadow: rgba(0, 0, 0, 0.04);
@@ -36,33 +42,39 @@
 
 .dark {
   /* Dark Mode (High-Tech / Premium) */
-  --bg-primary: #0b1121;
-  /* Richer, darker navy */
-  --bg-secondary: #151e32;
-  /* Slightly lighter navy */
-  --bg-tertiary: #1e293b;
-  /* Slate 800 */
+  --bg-primary: #000000;
+  /* True black */
+  --bg-secondary: #0b0b0b;
+  /* Near-black surface */
+  --bg-tertiary: #141414;
+  /* Elevated surface */
+
 
   --text-primary: #f8fafc;
   /* Slate 50 */
-  --text-secondary: #94a3b8;
-  /* Slate 400 */
+  --text-secondary: #b5b5b5;
+  /* Readable secondary on black */
+
 
   --accent-primary: #38bdf8;
   /* Sky 400 */
   --accent-secondary: #818cf8;
   /* Indigo 400 */
 
+  --accent-primary-rgb: 56, 189, 248;
+
+
   /* RGBs for opacity */
-  --bg-primary-rgb: 11, 17, 33;
-  --bg-secondary-rgb: 21, 30, 50;
+  --bg-primary-rgb: 0, 0, 0;
+  --bg-secondary-rgb: 11, 11, 11;
+
 
   --glass-border: rgba(56, 189, 248, 0.15);
   --glass-shadow: rgba(0, 0, 0, 0.4);
 
-  --orb-1: rgba(99, 102, 241, 0.2);
-  --orb-2: rgba(14, 165, 233, 0.2);
-  --orb-3: rgba(15, 23, 42, 0.6);
+  --orb-1: rgba(99, 102, 241, 0.18);
+  --orb-2: rgba(14, 165, 233, 0.16);
+  --orb-3: rgba(0, 0, 0, 0.65);
 }
 
 body {

@@ -144,17 +144,17 @@ const Team = () => {
             {filteredMembers.map((member, index) => (
               <div
                 key={member.id}
-                className="group bg-dark-secondary rounded-xl overflow-hidden border border-dark-tertiary hover:border-accent-cyan transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-cyan/20"
+                className="group glass-card rounded-xl overflow-hidden border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-primary/20"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Member Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-50"></div>
 
                   {/* Social Links - Appear on Hover */}
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -162,7 +162,7 @@ const Team = () => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-accent-cyan rounded-full flex items-center justify-center text-dark-bg hover:bg-accent-cyan/90 transition-colors duration-300"
+                      className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
                     >
                       <FaLinkedin size={18} />
                     </a>
@@ -170,7 +170,7 @@ const Team = () => {
                       href={member.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-accent-cyan rounded-full flex items-center justify-center text-dark-bg hover:bg-accent-cyan/90 transition-colors duration-300"
+                      className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
                     >
                       <FaGithub size={18} />
                     </a>
@@ -182,7 +182,7 @@ const Team = () => {
                   <h3 className="text-xl font-bold text-text-primary mb-1 group-hover:text-accent-cyan transition-colors duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-accent-cyan text-sm font-semibold mb-3">{member.title}</p>
+                  <p className="text-accent-primary text-sm font-semibold mb-3">{member.title}</p>
                   <p className="text-text-secondary text-sm mb-4">{member.bio}</p>
 
                   {/* Specialties Tags */}
@@ -190,7 +190,7 @@ const Team = () => {
                     {member.specialties.map((specialty, idx) => (
                       <span
                         key={idx}
-                        className="bg-dark-bg px-3 py-1 rounded-full text-xs text-accent-cyan border border-dark-tertiary"
+                        className="bg-secondary px-3 py-1 rounded-full text-xs text-accent-primary border border-accent-primary/10"
                       >
                         {specialty}
                       </span>

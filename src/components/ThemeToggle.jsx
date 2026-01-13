@@ -8,10 +8,7 @@ const ThemeToggle = () => {
       return (
             <button
                   onClick={toggleTheme}
-                  className={`relative p-2 rounded-full transition-all duration-300 focus:outline-none ${theme === 'dark'
-                              ? 'bg-secondary text-accent-primary hover:bg-tertiary'
-                              : 'bg-indigo-100 text-indigo-600 hover:bg-indigo-200'
-                        }`}
+                  className={`relative p-2 rounded-full transition-all duration-300 focus:outline-none border border-accent-primary/20 bg-secondary text-text-secondary hover:bg-tertiary hover:text-accent-primary`}
                   aria-label="Toggle Theme"
             >
                   {theme === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}

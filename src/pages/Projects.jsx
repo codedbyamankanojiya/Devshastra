@@ -22,14 +22,6 @@ const Projects = () => {
       category: 'AI & ML',
     },
     {
-      id: 4,
-      title: 'Smart Home Automation System',
-      description: 'IoT-based home automation using Arduino, controlling lights, temperature, and security systems.',
-      image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&h=600&fit=crop',
-      tags: ['Arduino', 'IoT', 'React', 'MQTT'],
-      category: 'IoT',
-    },
-    {
       id: 5,
       title: 'Smart Rail Crossing System',
       description: 'Automated railway crossing safety system using advanced sensors and signaling to prevent accidents and optimize traffic flow.',
@@ -126,9 +118,9 @@ const Projects = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-70"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="bg-dark-bg/80 backdrop-blur-sm text-accent-cyan px-3 py-1 rounded-full text-xs font-bold border border-accent-cyan/20">
+                      <span className="bg-secondary/80 backdrop-blur-sm text-accent-primary px-3 py-1 rounded-full text-xs font-bold border border-accent-primary/20">
                         {project.category}
                       </span>
                     </div>
@@ -154,12 +146,12 @@ const Projects = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex items-center justify-between border-t border-white/5 pt-6">
+                    <div className="flex items-center justify-between border-t border-accent-primary/10 pt-6">
                       <button className="flex items-center space-x-2 text-text-primary hover:text-accent-cyan transition-colors font-medium text-sm">
                         <span>View Details</span>
                         <FaExternalLinkAlt size={12} />
                       </button>
-                      <button className="text-text-secondary hover:text-white transition-colors">
+                      <button className="text-text-secondary hover:text-text-primary transition-colors">
                         <FaGithub size={20} />
                       </button>
                     </div>

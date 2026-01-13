@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#0a192f] pt-20 pb-10 border-t border-dark-tertiary">
+    <footer className="relative bg-primary pt-20 pb-10 border-t border-accent-primary/10">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-accent-purple/5 rounded-full filter blur-[100px]"></div>
         <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] bg-accent-cyan/5 rounded-full filter blur-[100px]"></div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center shadow-lg shadow-accent-cyan/10">
-                <span className="text-dark-bg font-bold text-xl">DS</span>
+                <span className="text-white font-bold text-xl">DS</span>
               </div>
               <span className="text-xl font-bold text-text-primary tracking-tight">DevShastra Technologies</span>
             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-dark-bg transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
               >
                 <FaLinkedin size={18} />
               </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-dark-bg transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
               >
                 <FaGithub size={18} />
               </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-dark-bg transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
               >
                 <FaTwitter size={18} />
               </a>
@@ -119,7 +119,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-dark-tertiary/50">
+        <div className="pt-8 border-t border-accent-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-text-secondary text-sm">
               © {currentYear} DevShastra Technologies. All rights reserved.
