@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 
 import YashImg from '../assets/Team/Yash.png';
 import AmanImg from '../assets/Team/Aman.png';
@@ -35,6 +35,7 @@ const Team = () => {
       specialties: ['Web Dev', 'UI/UX & Design', 'AI & ML', 'IoT & Hardware', 'Cyber Security', 'App Dev'],
       linkedin: 'https://www.linkedin.com/in/aman-kanojiya-7386822b0',
       github: 'https://github.com/codedbyamankanojiya',
+      portfolio: 'https://amankanojiyaportfolio.vercel.app',
       bio: 'Leading technical direction. Expert in Web & App Dev, UI/UX, AI/ML/IoT integrations, and Cyber Security.',
     },
     {
@@ -53,8 +54,8 @@ const Team = () => {
       title: 'Electronics Engineer',
       image: AadityaImg,
       specialties: ['IoT & Hardware', 'Circuit Building'],
-      linkedin: '#',
-      github: '#',
+      linkedin: 'https://www.linkedin.com/in/aaditya-kadam-90b881334/',
+      github: 'https://github.com/AK0514',
       bio: 'Pursuing BTech in Electronics Engineering. Specialized in circuit building and microcontrollers like ESP and Arduino.',
     },
     {
@@ -63,8 +64,9 @@ const Team = () => {
       title: 'Full Stack Developer',
       image: VaishnavImg,
       specialties: ['Web Dev', 'UI/UX & Design', 'Marketing'],
-      linkedin: '#',
-      github: 'https://github.com/dreamingVaishu',
+      linkedin: 'https://www.linkedin.com/in/vaishnav-kadav-1aba072ab/',
+      github: 'https://github.com/DreamingVaishu',
+      portfolio: 'https://knowaboutvaishnav.vercel.app/',
       bio: 'Pursuing BCA. Passionate about marketing and eCommerce. Blends code, design, and strategy.',
     },
     {
@@ -73,7 +75,7 @@ const Team = () => {
       title: 'AI/ML Developer',
       image: AryanImg,
       specialties: ['AI & ML', 'Agentic AI', 'Gen AI'],
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/aryan-bhosale-003745374/',
       github: 'https://github.com/aryanbhosale285-web',
       bio: 'Pursuing BSc CS. AI/ML learner passionate about building new AI tools for quick work.',
     },
@@ -83,7 +85,7 @@ const Team = () => {
       title: 'Web & AIML Developer',
       image: KaranImg,
       specialties: ['Web Dev', 'AI & ML', 'IoT & Hardware'],
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/karan-angane-7a4b60331/',
       github: 'https://github.com/Timepass2117',
       bio: 'Pursuing BE in CSE AIML. Worked on Arduino mini-projects and currently working on website making.',
     },
@@ -158,22 +160,36 @@ const Team = () => {
 
                   {/* Social Links - Appear on Hover */}
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
-                    >
-                      <FaLinkedin size={18} />
-                    </a>
-                    <a
-                      href={member.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
-                    >
-                      <FaGithub size={18} />
-                    </a>
+                    {member.linkedin && member.linkedin !== '#' && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                      >
+                        <FaLinkedin size={18} />
+                      </a>
+                    )}
+                    {member.github && member.github !== '#' && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                      >
+                        <FaGithub size={18} />
+                      </a>
+                    )}
+                    {member.portfolio && member.portfolio !== '#' && (
+                      <a
+                        href={member.portfolio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                      >
+                        <FaGlobe size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

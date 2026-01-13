@@ -22,6 +22,14 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
@@ -35,6 +43,14 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-panel shadow-lg py-2' : 'bg-transparent py-4'
         }`}
     >
+      {isOpen && (
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close mobile menu"
+          className="fixed inset-0 z-40 bg-black/40"
+        />
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -70,7 +86,8 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-text-primary hover:text-accent-primary transition-colors duration-300"
+              className="w-11 h-11 inline-flex items-center justify-center rounded-xl text-text-primary hover:text-accent-primary hover:bg-tertiary transition-colors duration-300"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -80,15 +97,15 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden fixed left-0 right-0 top-[76px] z-50 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
           }`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-2 glass-panel m-4 rounded-xl border-t-0">
+        <div className="px-4 pt-4 pb-4 space-y-2 glass-panel mx-4 rounded-xl border-t-0">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`block px-4 py-3 rounded-lg text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
+              className={`block px-4 py-4 rounded-xl text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
                 }`}
             >
               {link.name}
