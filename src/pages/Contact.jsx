@@ -91,10 +91,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-bg py-20 border-b border-dark-tertiary">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Get in <span className="text-accent-cyan">Touch</span>
+            Get in <span className="text-accent-primary">Touch</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Let's build something together. Reach out to discuss your project or ask any questions.
@@ -111,8 +111,8 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-text-primary mb-8">Send Us a Message</h2>
 
               {submitted && (
-                <div className="mb-6 p-4 bg-accent-cyan/10 border border-accent-cyan rounded-lg">
-                  <p className="text-accent-cyan font-semibold">
+                <div className="mb-6 p-4 bg-accent-primary/10 border border-accent-primary rounded-lg">
+                  <p className="text-accent-primary font-semibold">
                     Thank you! Your message has been sent successfully. We'll get back to you soon.
                   </p>
                 </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                 {/* Full Name */}
                 <div>
                   <label htmlFor="fullName" className="block text-text-secondary text-sm font-semibold mb-2 uppercase tracking-wide">
-                    Full Name <span className="text-accent-cyan">*</span>
+                    Full Name <span className="text-accent-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -130,9 +130,9 @@ const Contact = () => {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.fullName ? 'border-red-500' : 'border-dark-tertiary/50'
-                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-300`}
-                    placeholder="John Doe"
+                    className={`w-full px-4 py-3 bg-secondary/50 border ${errors.fullName ? 'border-red-500' : 'border-accent-primary/20'
+                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary transition-all duration-300`}
+                    placeholder="Rohit Sharma"
                   />
                   {errors.fullName && (
                     <p className="mt-1 text-red-500 text-sm">{errors.fullName}</p>
@@ -142,7 +142,7 @@ const Contact = () => {
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-text-secondary text-sm font-semibold mb-2 uppercase tracking-wide">
-                    Email Address <span className="text-accent-cyan">*</span>
+                    Email Address <span className="text-accent-primary">*</span>
                   </label>
                   <input
                     type="email"
@@ -150,9 +150,9 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.email ? 'border-red-500' : 'border-dark-tertiary/50'
-                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-300`}
-                    placeholder="john@example.com"
+                    className={`w-full px-4 py-3 bg-secondary/50 border ${errors.email ? 'border-red-500' : 'border-accent-primary/20'
+                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary transition-all duration-300`}
+                    placeholder="rohit.sharma@example.com"
                   />
                   {errors.email && (
                     <p className="mt-1 text-red-500 text-sm">{errors.email}</p>
@@ -162,7 +162,7 @@ const Contact = () => {
                 {/* Service of Interest */}
                 <div>
                   <label htmlFor="service" className="block text-text-secondary text-sm font-semibold mb-2 uppercase tracking-wide">
-                    Service of Interest <span className="text-accent-cyan">*</span>
+                    Service of Interest <span className="text-accent-primary">*</span>
                   </label>
                   <div className="relative">
                     <select
@@ -170,12 +170,12 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.service ? 'border-red-500' : 'border-dark-tertiary/50'
-                        } rounded-xl text-text-primary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-300 appearance-none`}
+                      className={`w-full px-4 py-3 bg-secondary/50 border ${errors.service ? 'border-red-500' : 'border-accent-primary/20'
+                        } rounded-xl text-text-primary focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary transition-all duration-300 appearance-none`}
                     >
-                      <option value="" className="bg-dark-secondary">Select a service</option>
+                      <option value="" className="bg-secondary">Select a service</option>
                       {services.map((service) => (
-                        <option key={service} value={service} className="bg-dark-secondary">
+                        <option key={service} value={service} className="bg-secondary">
                           {service}
                         </option>
                       ))}
@@ -192,7 +192,7 @@ const Contact = () => {
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-text-secondary text-sm font-semibold mb-2 uppercase tracking-wide">
-                    Your Message <span className="text-accent-cyan">*</span>
+                    Your Message <span className="text-accent-primary">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -200,9 +200,9 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="6"
-                    className={`w-full px-4 py-3 bg-dark-bg/50 border ${errors.message ? 'border-red-500' : 'border-dark-tertiary/50'
-                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-all duration-300 resize-none`}
-                    placeholder="Tell us about your project..."
+                    className={`w-full px-4 py-3 bg-secondary/50 border ${errors.message ? 'border-red-500' : 'border-accent-primary/20'
+                      } rounded-xl text-text-primary focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary transition-all duration-300 resize-none`}
+                    placeholder="Tell us about your project or idea..."
                   ></textarea>
                   {errors.message && (
                     <p className="mt-1 text-red-500 text-sm">{errors.message}</p>
@@ -212,7 +212,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-accent-cyan to-accent-cyan/80 text-dark-bg py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-accent-cyan/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-accent-primary to-accent-primary/90 text-white py-5 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-3 border border-accent-primary/20"
                 >
                   <span>Send Message</span>
                   <FaPaperPlane />
@@ -232,16 +232,16 @@ const Contact = () => {
               {/* Contact Cards */}
               <div className="space-y-6">
                 {/* Email */}
-                <div className="bg-dark-secondary p-6 rounded-xl border border-dark-tertiary hover:border-accent-cyan transition-all duration-300 group">
+                <div className="glass-card p-6 rounded-xl border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 group">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <FaEnvelope className="text-dark-bg" size={20} />
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <FaEnvelope className="text-white" size={20} />
                     </div>
                     <div>
                       <h3 className="text-text-primary font-semibold mb-2">Email Us</h3>
                       <a
                         href="mailto:contact@devshastratech.com"
-                        className="text-accent-cyan hover:text-accent-cyan/80 transition-colors duration-300"
+                        className="text-accent-primary hover:text-accent-primary/80 transition-colors duration-300"
                       >
                         contact@devshastratech.com
                       </a>
@@ -250,16 +250,16 @@ const Contact = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="bg-dark-secondary p-6 rounded-xl border border-dark-tertiary hover:border-accent-cyan transition-all duration-300 group">
+                <div className="glass-card p-6 rounded-xl border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 group">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <FaPhone className="text-dark-bg" size={20} />
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <FaPhone className="text-white" size={20} />
                     </div>
                     <div>
                       <h3 className="text-text-primary font-semibold mb-2">Call Us</h3>
                       <a
                         href="tel:+91XXXXXXXXXX"
-                        className="text-accent-cyan hover:text-accent-cyan/80 transition-colors duration-300"
+                        className="text-accent-primary hover:text-accent-primary/80 transition-colors duration-300"
                       >
                         +91 XXXXX XXXXX
                       </a>
@@ -268,16 +268,15 @@ const Contact = () => {
                 </div>
 
                 {/* Location */}
-                <div className="bg-dark-secondary p-6 rounded-xl border border-dark-tertiary hover:border-accent-cyan transition-all duration-300 group">
+                <div className="glass-card p-6 rounded-xl border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 group">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <FaMapMarkerAlt className="text-dark-bg" size={20} />
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <FaMapMarkerAlt className="text-white" size={20} />
                     </div>
                     <div>
                       <h3 className="text-text-primary font-semibold mb-2">Visit Us</h3>
                       <p className="text-text-secondary">
-                        Your City, State<br />
-                        India
+                        Maharashtra, India
                       </p>
                     </div>
                   </div>
@@ -285,7 +284,7 @@ const Contact = () => {
               </div>
 
               {/* Office Hours */}
-              <div className="bg-gradient-to-br from-accent-cyan/10 to-accent-purple/10 p-6 rounded-xl border border-dark-tertiary">
+              <div className="bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 p-6 rounded-xl border border-accent-primary/20">
                 <h3 className="text-text-primary font-semibold mb-4">Office Hours</h3>
                 <div className="space-y-2 text-text-secondary">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
