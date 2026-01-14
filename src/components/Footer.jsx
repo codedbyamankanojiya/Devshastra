@@ -41,32 +41,6 @@ const Footer = () => {
               Engineering the Future. We deliver cutting-edge technology solutions
               that empower businesses and governments to scale new heights.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
-              >
-                <FaLinkedin size={18} />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
-              >
-                <FaGithub size={18} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-text-secondary hover:bg-accent-cyan hover:text-white transition-all duration-300"
-              >
-                <FaTwitter size={18} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -105,10 +79,6 @@ const Footer = () => {
               <li className="flex items-start space-x-4 text-text-secondary">
                 <FaEnvelope className="mt-1 text-accent-cyan flex-shrink-0" />
                 <span>contact@devshastratech.com</span>
-              </li>
-              <li className="flex items-start space-x-4 text-text-secondary">
-                <FaPhone className="mt-1 text-accent-cyan flex-shrink-0" />
-                <span>+91 XXXXX XXXXX</span>
               </li>
               <li className="flex items-start space-x-4 text-text-secondary">
                 <FaMapMarkerAlt className="mt-1 text-accent-cyan flex-shrink-0" />
