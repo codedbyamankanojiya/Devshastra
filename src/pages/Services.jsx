@@ -102,10 +102,10 @@ const Services = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-bg py-20 border-b border-dark-tertiary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 data-reveal className="text-5xl md:text-6xl font-bold mb-6">
             Our <span className="text-accent-cyan">Services</span>
           </h1>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+          <p data-reveal className="text-xl text-text-secondary max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your business and solve complex challenges
           </p>
         </div>
@@ -174,15 +174,15 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-text-secondary mb-8">
+          <p data-reveal className="text-xl text-text-secondary mb-8">
             Let's discuss how our services can help you achieve your goals.
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105 btn-shine hover-glow w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
           >
             Contact Us Today
           </a>

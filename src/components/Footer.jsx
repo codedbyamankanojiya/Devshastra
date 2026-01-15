@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center shadow-lg shadow-accent-cyan/10">
+              <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center shadow-lg shadow-accent-cyan/10 hover-tilt">
                 <span className="text-white font-bold text-xl">DS</span>
               </div>
               <span className="text-xl font-bold text-text-primary tracking-tight">DevShastra Technologies</span>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 text-base"
+                    className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 text-base link-underline-anim"
                   >
                     {link.name}
                   </Link>
@@ -95,10 +95,10 @@ const Footer = () => {
               © {currentYear} DevShastra Technologies. All rights reserved.
             </p>
             <div className="flex space-x-8 text-sm">
-              <button className="text-text-secondary hover:text-accent-cyan transition-colors duration-300">
+              <button className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 link-underline-anim">
                 Privacy Policy
               </button>
-              <button className="text-text-secondary hover:text-accent-cyan transition-colors duration-300">
+              <button className="text-text-secondary hover:text-accent-cyan transition-colors duration-300 link-underline-anim">
                 Terms of Service
               </button>
             </div>

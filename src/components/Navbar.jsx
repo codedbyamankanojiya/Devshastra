@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative text-sm uppercase tracking-wider font-semibold hover:text-accent-primary transition-colors duration-300 ${location.pathname === link.path ? 'text-accent-primary' : 'text-text-secondary'
+                className={`relative text-sm uppercase tracking-wider font-semibold hover:text-accent-primary transition-colors duration-300 link-underline-anim ${location.pathname === link.path ? 'text-accent-primary' : 'text-text-secondary'
                   }`}
               >
                 {link.name}

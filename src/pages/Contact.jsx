@@ -93,10 +93,10 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-secondary to-primary py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 data-reveal className="text-5xl md:text-6xl font-bold mb-6">
             Get in <span className="text-accent-primary">Touch</span>
           </h1>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+          <p data-reveal className="text-xl text-text-secondary max-w-3xl mx-auto">
             Let's build something together. Reach out to discuss your project or ask any questions.
           </p>
         </div>
@@ -212,7 +212,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-accent-primary to-accent-primary/90 text-white py-5 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-3 border border-accent-primary/20"
+                  className="w-full bg-gradient-to-r from-accent-primary to-accent-primary/90 text-white py-5 rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-accent-primary/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-3 border border-accent-primary/20 btn-shine hover-glow focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:translate-y-0"
                 >
                   <span>Send Message</span>
                   <FaPaperPlane />

@@ -110,10 +110,10 @@ const Team = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h1 data-reveal className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             Meet Our <span className="text-gradient">Team</span>
           </h1>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
+          <p data-reveal className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
             The brilliant minds behind the magic. Our diverse team of experts brings innovation to life.
           </p>
         </div>
@@ -229,15 +229,15 @@ const Team = () => {
       {/* Join Team CTA */}
       <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-6">
             Want to Join Our Team?
           </h2>
-          <p className="text-xl text-text-secondary mb-8">
+          <p data-reveal className="text-xl text-text-secondary mb-8">
             We're always looking for talented individuals who are passionate about technology and innovation.
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105 btn-shine hover-glow w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
           >
             Get in Touch
           </a>

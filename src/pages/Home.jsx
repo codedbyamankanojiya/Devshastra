@@ -72,7 +72,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div data-reveal className="min-h-screen route-fade">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -88,24 +88,24 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent-primary/10 border border-accent-primary/20 backdrop-blur-md animate-fade-in">
+          <div data-reveal className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent-primary/10 border border-accent-primary/20 backdrop-blur-md animate-fade-in">
             <span className="text-accent-primary font-semibold text-sm tracking-wide uppercase">Engineering the Future</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 animate-fade-in tracking-tight leading-none text-text-primary">
+          <h1 data-reveal className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 animate-fade-in tracking-tight leading-none text-text-primary">
             We Build <br className="hidden md:block" />
-            <span className="text-gradient relative inline-block">
+            <span className="text-gradient-animate relative inline-block">
               What's Next
               {/* Decorative underline */}
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-secondary opacity-50" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.00024 7.00003C51.6427 1.83336 151.776 -3.3333 198.001 3.50003" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg>
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-text-secondary mb-10 max-w-2xl mx-auto animate-fade-in-delay font-normal leading-relaxed">
+          <p data-reveal className="text-lg md:text-xl text-text-secondary mb-10 max-w-2xl mx-auto animate-fade-in-delay font-normal leading-relaxed">
             DevShastra Technologies delivers enterprise-grade software solutions. From scalable web architectures to intelligent government systems, we turn complexity into clarity.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in-delay-2 items-center">
+          <div data-reveal className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in-delay-2 items-center">
             <PrimaryButton to="/projects">View Case Studies</PrimaryButton>
             <PrimaryButton to="/contact" variant="outline">Partner With Us</PrimaryButton>
           </div>
@@ -123,19 +123,19 @@ const Home = () => {
       <section id="services" data-animate className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 data-reveal className="text-4xl md:text-6xl font-bold mb-6">
               Our <span className="text-accent-cyan">Core Services</span>
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p data-reveal className="text-text-secondary text-lg max-w-2xl mx-auto">
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`glass-card p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-accent-cyan/20 ${isVisible['services'] ? 'animate-slide-up' : 'opacity-0'
+                className={`glass-card p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-accent-cyan/20 hover-tilt card-glow ${isVisible['services'] ? 'animate-slide-up' : 'opacity-0'
                   }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -154,10 +154,10 @@ const Home = () => {
       <section id="why-us" data-animate className="py-20 bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-4">
               Why <span className="text-accent-cyan">Choose Us?</span>
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p data-reveal className="text-text-secondary text-lg max-w-2xl mx-auto">
               We don't just build software—we create solutions that make a difference
             </p>
           </div>
@@ -214,7 +214,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-accent-primary/10 to-accent-secondary/10 border-y border-accent-primary/20">
+      <section data-reveal className="py-16 md:py-20 bg-gradient-to-r from-accent-primary/10 to-accent-secondary/10 border-y border-accent-primary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Have a Project in Mind?

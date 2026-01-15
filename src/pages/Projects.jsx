@@ -66,10 +66,10 @@ const Projects = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h1 data-reveal className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             Our <span className="text-gradient">Projects</span>
           </h1>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
+          <p data-reveal className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
             Explore our portfolio of successful projects and upcoming innovations
           </p>
         </div>
@@ -105,11 +105,11 @@ const Projects = () => {
       {activeTab === 'completed' && (
         <section className="py-12 md:py-20 lg:py-24 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 stagger">
               {completedProjects.map((project) => (
-                <div
+                <div data-reveal
                   key={project.id}
-                  className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3"
+                  className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover-tilt"
                 >
                   {/* Project Image */}
                   <div className="relative h-56 overflow-hidden">
@@ -168,7 +168,7 @@ const Projects = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-text-primary mb-4">
+              <h2 data-reveal className="text-3xl font-bold text-text-primary mb-4">
                 Innovation in <span className="text-accent-cyan">Progress</span>
               </h2>
               <p className="text-text-secondary max-w-2xl mx-auto">
@@ -178,9 +178,9 @@ const Projects = () => {
 
             <div className="space-y-8">
               {upcomingProjects.map((project, index) => (
-                <div
+                <div data-reveal
                   key={project.id}
-                  className="bg-dark-secondary p-8 rounded-xl border border-dark-tertiary hover:border-accent-purple transition-all duration-300"
+                  className="bg-dark-secondary p-8 rounded-xl border border-dark-tertiary hover:border-accent-purple transition-all duration-300 hover-tilt"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                     <div className="flex-1">
