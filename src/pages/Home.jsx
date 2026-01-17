@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaCode, FaMobileAlt, FaBrain, FaMicrochip, FaLandmark, FaRocket, FaUsers, FaAward, FaCheckCircle } from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaBrain, FaMicrochip, FaLandmark, FaRocket, FaUsers, FaAward } from 'react-icons/fa';
 import PrimaryButton from '../components/PrimaryButton';
 import AnimatedCounter from '../components/AnimatedCounter';
 
@@ -94,7 +94,7 @@ const Home = () => {
 
           <h1 data-reveal className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 animate-fade-in tracking-tight leading-none text-text-primary">
             We Build <br className="hidden md:block" />
-            <span className="text-gradient-animate relative inline-block">
+            <span className="text-gradient-animate relative inline-block title-backdrop">
               What's Next
               {/* Decorative underline */}
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-secondary opacity-50" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.00024 7.00003C51.6427 1.83336 151.776 -3.3333 198.001 3.50003" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg>
@@ -120,11 +120,11 @@ const Home = () => {
       </section>
 
       {/* Core Services Section */}
-      <section id="services" data-animate className="py-24 relative">
+      <section id="services" data-animate className="py-24 relative section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 data-reveal className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-accent-cyan">Core Services</span>
+              <span className="title-backdrop">Our <span className="text-accent-cyan">Core Services</span></span>
             </h2>
             <p data-reveal className="text-text-secondary text-lg max-w-2xl mx-auto">
               Comprehensive technology solutions tailored to your business needs
@@ -135,7 +135,7 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`glass-card p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-accent-cyan/20 hover-tilt card-glow ${isVisible['services'] ? 'animate-slide-up' : 'opacity-0'
+                className={`glass-card p-8 rounded-2xl transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl hover:shadow-accent-cyan/20 hover-tilt card-glow spotlight spotlight-border group ${isVisible['services'] ? 'animate-slide-up' : 'opacity-0'
                   }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -151,22 +151,22 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-us" data-animate className="py-20 bg-dark-bg">
+      <section id="why-us" data-animate className="py-20 relative section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-4">
-              Why <span className="text-accent-cyan">Choose Us?</span>
+              <span className="title-backdrop">Why <span className="text-accent-cyan">Choose Us?</span></span>
             </h2>
             <p data-reveal className="text-text-secondary text-lg max-w-2xl mx-auto">
               We don't just build software—we create solutions that make a difference
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className={`text-center p-8 ${isVisible['why-us'] ? 'animate-fade-in' : 'opacity-0'
+                className={`text-center p-8 glass-card rounded-2xl border border-dark-tertiary/30 transition-all duration-500 hover-tilt card-glow spotlight spotlight-border ${isVisible['why-us'] ? 'animate-fade-in' : 'opacity-0'
                   }`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -182,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-br from-accent-primary/5 via-transparent to-accent-secondary/5">
+      <section className="py-20 bg-gradient-to-br from-accent-primary/5 via-transparent to-accent-secondary/5 section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div className="text-center">
@@ -214,10 +214,10 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section data-reveal className="py-16 md:py-20 bg-gradient-to-r from-accent-primary/10 to-accent-secondary/10 border-y border-accent-primary/20">
+      <section data-reveal className="py-16 md:py-20 bg-gradient-to-r from-accent-primary/10 to-accent-secondary/10 border-y border-accent-primary/20 section-ambient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-            Have a Project in Mind?
+            <span className="title-backdrop">Have a Project in Mind?</span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-6 md:mb-8 max-w-2xl mx-auto">
             Let's turn your ideas into reality. Get in touch with our team today.

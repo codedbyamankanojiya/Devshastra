@@ -6,25 +6,27 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
       const counterRef = useRef(null);
 
       useEffect(() => {
+            if (isVisible) return;
+
+            const node = counterRef.current;
+            if (!node) return;
+
             const observer = new IntersectionObserver(
                   ([entry]) => {
                         if (entry.isIntersecting && !isVisible) {
                               setIsVisible(true);
+                              observer.disconnect();
                         }
                   },
                   { threshold: 0.1 }
             );
 
-            if (counterRef.current) {
-                  observer.observe(counterRef.current);
-            }
+            observer.observe(node);
 
             return () => {
-                  if (counterRef.current) {
-                        observer.unobserve(counterRef.current);
-                  }
+                  observer.disconnect();
             };
-      }, []);
+      }, [isVisible]);
 
       useEffect(() => {
             if (!isVisible) return;

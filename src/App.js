@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,6 +13,13 @@ import './styles/tech.css';
 
 function AppEffects() {
   const location = useLocation();
+  const [revealKey, setRevealKey] = useState(0);
+
+  useEffect(() => {
+    const onRefresh = () => setRevealKey((k) => k + 1);
+    window.addEventListener('reveal:refresh', onRefresh);
+    return () => window.removeEventListener('reveal:refresh', onRefresh);
+  }, []);
 
   useEffect(() => {
     const els = document.querySelectorAll('[data-reveal]');
@@ -30,7 +37,7 @@ function AppEffects() {
 
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
-  }, [location.pathname]);
+  }, [location.pathname, revealKey]);
 
   useEffect(() => {
     const nebula = document.querySelector('.nebula-bg');

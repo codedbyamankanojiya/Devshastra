@@ -178,18 +178,19 @@ code {
 /* Professional Glassmorphism */
 /* Panel: For larger sections, forms */
 .glass-panel {
-  background: rgba(var(--bg-primary-rgb), 0.75);
+  background: rgba(var(--bg-primary-rgb), 0.62);
   /* More opaque for readability */
   backdrop-filter: blur(16px);
   /* Stronger blur for premium feel */
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
+
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Card: For items, grids */
 .glass-card {
-  background: rgba(var(--bg-secondary-rgb), 0.6);
+  background: rgba(var(--bg-secondary-rgb), 0.46);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
@@ -199,7 +200,7 @@ code {
 }
 
 .glass-card:hover {
-  background: rgba(var(--bg-secondary-rgb), 0.85);
+  background: rgba(var(--bg-secondary-rgb), 0.68);
   border-color: var(--accent-primary);
   box-shadow: 0 20px 25px -5px var(--glass-shadow), 0 10px 10px -5px var(--glass-shadow);
   transform: translateY(-4px);

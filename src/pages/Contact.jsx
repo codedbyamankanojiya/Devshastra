@@ -89,12 +89,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 route-fade">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-secondary to-primary py-20 border-b border-accent-primary/20">
+      <section className="hero-animated bg-gradient-to-br from-primary via-secondary to-primary py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 data-reveal className="text-5xl md:text-6xl font-bold mb-6">
-            Get in <span className="text-accent-primary">Touch</span>
+            <span className="title-backdrop">Get in <span className="text-accent-primary">Touch</span></span>
           </h1>
           <p data-reveal className="text-xl text-text-secondary max-w-3xl mx-auto">
             Let's build something together. Reach out to discuss your project or ask any questions.
@@ -103,7 +103,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 relative">
+      <section className="py-24 relative section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}

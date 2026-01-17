@@ -63,7 +63,7 @@ const Team = () => {
       name: 'Vaishnav Kadav',
       title: 'Full Stack Developer',
       image: VaishnavImg,
-      specialties: ['Web Dev', 'UI/UX & Design', 'Marketing'],
+      specialties: ['Web Dev', 'App Dev', 'UI/UX & Design', 'Marketing'],
       linkedin: 'https://www.linkedin.com/in/vaishnav-kadav-1aba072ab/',
       github: 'https://github.com/DreamingVaishu',
       portfolio: 'https://knowaboutvaishnav.vercel.app/',
@@ -84,7 +84,7 @@ const Team = () => {
       name: 'Karan Angane',
       title: 'Web & AIML Developer',
       image: KaranImg,
-      specialties: ['Web Dev', 'AI & ML', 'IoT & Hardware'],
+      specialties: ['AI & ML', 'IoT & Hardware'],
       linkedin: 'https://www.linkedin.com/in/karan-angane-7a4b60331/',
       github: 'https://github.com/Timepass2117',
       bio: 'Pursuing BE in CSE AIML. Worked on Arduino mini-projects and currently working on website making.',
@@ -108,10 +108,10 @@ const Team = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
+      <section className="hero-animated bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 data-reveal className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            Meet Our <span className="text-gradient">Team</span>
+            <span className="title-backdrop">Meet Our <span className="text-gradient">Team</span></span>
           </h1>
           <p data-reveal className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
             The brilliant minds behind the magic. Our diverse team of experts brings innovation to life.
@@ -140,7 +140,7 @@ const Team = () => {
       </section>
 
       {/* Team Grid */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20 section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {filteredMembers.map((member, index) => (
@@ -227,7 +227,7 @@ const Team = () => {
       </section>
 
       {/* Join Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary">
+      <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary section-ambient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-6">
             Want to Join Our Team?

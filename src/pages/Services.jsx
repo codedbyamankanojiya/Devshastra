@@ -100,10 +100,10 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-bg py-20 border-b border-dark-tertiary">
+      <section className="hero-animated bg-gradient-to-br from-dark-bg via-dark-secondary to-dark-bg py-20 border-b border-dark-tertiary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 data-reveal className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span className="text-accent-cyan">Services</span>
+            <span className="title-backdrop">Our <span className="text-accent-cyan">Services</span></span>
           </h1>
           <p data-reveal className="text-xl text-text-secondary max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your business and solve complex challenges
@@ -112,7 +112,7 @@ const Services = () => {
       </section>
 
       {/* Services Detail Section */}
-      <section className="py-24 relative">
+      <section className="py-24 relative section-ambient section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="space-y-32">
             {services.map((service, index) => (
@@ -137,7 +137,7 @@ const Services = () => {
                         {service.technologies.map((tech, idx) => (
                           <div
                             key={idx}
-                            className="flex items-center space-x-2 bg-dark-bg/50 px-4 py-2 rounded-lg border border-dark-tertiary/50 hover:border-accent-cyan/50 transition-colors"
+                            className="flex items-center space-x-2 bg-secondary/30 backdrop-blur-sm px-4 py-2 rounded-lg border border-dark-tertiary/50 hover:border-accent-cyan/50 transition-colors"
                           >
                             <span className="text-accent-cyan">{tech.icon}</span>
                             <span className="text-text-primary text-sm">{tech.name}</span>
@@ -157,7 +157,7 @@ const Services = () => {
                     {service.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center space-x-4 bg-dark-secondary/30 p-5 rounded-xl border border-dark-tertiary/30 hover:border-accent-cyan/50 hover:bg-dark-secondary/50 transition-all duration-300 group"
+                        className="flex items-center space-x-4 bg-secondary/25 backdrop-blur-sm p-5 rounded-xl border border-dark-tertiary/30 hover:border-accent-cyan/50 transition-all duration-300 group hover-tilt card-glow spotlight"
                       >
                         <div className="w-2 h-2 bg-accent-cyan rounded-full group-hover:scale-150 transition-transform"></div>
                         <span className="text-text-secondary group-hover:text-text-primary transition-colors">{feature}</span>
@@ -172,7 +172,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary">
+      <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary section-ambient">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Get Started?
@@ -182,7 +182,7 @@ const Services = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105 btn-shine hover-glow w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
+            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105 btn-shine hover-glow btn-gradient-border spotlight spotlight-border pressable focus-ring w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
           >
             Contact Us Today
           </a>

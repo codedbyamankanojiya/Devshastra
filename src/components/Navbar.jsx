@@ -54,8 +54,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-primary/20">
+          <Link to="/" className="flex items-center space-x-3 group spotlight pressable focus-ring rounded-xl px-2 py-1 -ml-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-primary/20 spotlight-border">
               <span className="text-white font-bold text-xl">DS</span>
             </div>
             <span className="text-xl font-bold text-text-primary tracking-tight">
@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative text-sm uppercase tracking-wider font-semibold hover:text-accent-primary transition-colors duration-300 link-underline-anim ${location.pathname === link.path ? 'text-accent-primary' : 'text-text-secondary'
+                className={`relative text-sm uppercase tracking-wider font-semibold hover:text-accent-primary transition-colors duration-300 link-underline-anim spotlight pressable focus-ring rounded-lg px-2 py-1 ${location.pathname === link.path ? 'text-accent-primary' : 'text-text-secondary'
                   }`}
               >
                 {link.name}
@@ -86,7 +86,7 @@ const Navbar = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-11 h-11 inline-flex items-center justify-center rounded-xl text-text-primary hover:text-accent-primary hover:bg-tertiary transition-colors duration-300"
+              className="w-11 h-11 inline-flex items-center justify-center rounded-xl text-text-primary hover:text-accent-primary hover:bg-tertiary transition-colors duration-300 spotlight pressable focus-ring"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -105,7 +105,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`block px-4 py-4 rounded-xl text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
+              className={`block px-4 py-4 rounded-xl text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 spotlight pressable focus-ring ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
                 }`}
             >
               {link.name}

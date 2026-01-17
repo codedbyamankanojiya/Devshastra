@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('completed');
+
+  useEffect(() => {
+    window.dispatchEvent(new Event('reveal:refresh'));
+  }, [activeTab]);
 
   const completedProjects = [
     {
@@ -64,10 +68,10 @@ const Projects = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
+      <section className="hero-animated bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 data-reveal className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            Our <span className="text-gradient">Projects</span>
+            <span className="title-backdrop">Our <span className="text-gradient">Projects</span></span>
           </h1>
           <p data-reveal className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
             Explore our portfolio of successful projects and upcoming innovations
@@ -76,7 +80,7 @@ const Projects = () => {
       </section>
 
       {/* Tabs Navigation */}
-      <section className="sticky top-20 z-40 glass-panel border-b border-accent-primary/20">
+      <section className="sticky top-20 z-40 glass-panel border-b border-accent-primary/20 section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-4 md:space-x-8 overflow-x-auto scrollbar-hide">
             <button
@@ -103,13 +107,13 @@ const Projects = () => {
 
       {/* Completed Projects */}
       {activeTab === 'completed' && (
-        <section className="py-12 md:py-20 lg:py-24 relative">
+        <section className="py-12 md:py-20 lg:py-24 relative section-ambient section-divider">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 stagger">
               {completedProjects.map((project) => (
                 <div data-reveal
                   key={project.id}
-                  className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover-tilt"
+                  className="glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover-tilt card-glow spotlight spotlight-border"
                 >
                   {/* Project Image */}
                   <div className="relative h-56 overflow-hidden">
@@ -165,7 +169,7 @@ const Projects = () => {
 
       {/* Upcoming Ventures */}
       {activeTab === 'upcoming' && (
-        <section className="py-20">
+        <section className="py-20 section-ambient section-divider">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
               <h2 data-reveal className="text-3xl font-bold text-text-primary mb-4">
@@ -180,7 +184,7 @@ const Projects = () => {
               {upcomingProjects.map((project, index) => (
                 <div data-reveal
                   key={project.id}
-                  className="bg-dark-secondary p-8 rounded-xl border border-dark-tertiary hover:border-accent-purple transition-all duration-300 hover-tilt"
+                  className="glass-card p-8 rounded-xl border border-dark-tertiary/40 hover:border-accent-purple/70 transition-all duration-300 hover-tilt card-glow spotlight spotlight-border"
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                     <div className="flex-1">
@@ -193,7 +197,7 @@ const Projects = () => {
                       <p className="text-text-secondary text-lg mb-4">{project.description}</p>
 
                       {/* Impact */}
-                      <div className="bg-dark-bg p-4 rounded-lg border border-dark-tertiary mb-4">
+                      <div className="bg-secondary/30 backdrop-blur-sm p-4 rounded-lg border border-accent-primary/10 mb-4">
                         <p className="text-accent-cyan font-semibold mb-1">Expected Impact:</p>
                         <p className="text-text-secondary">{project.impact}</p>
                       </div>
@@ -203,7 +207,7 @@ const Projects = () => {
                         {project.tags.map((tag, idx) => (
                           <span
                             key={idx}
-                            className="bg-dark-bg px-3 py-1 rounded-full text-xs text-text-secondary border border-dark-tertiary"
+                            className="bg-secondary/30 px-3 py-1 rounded-full text-xs text-text-secondary border border-accent-primary/10"
                           >
                             {tag}
                           </span>
