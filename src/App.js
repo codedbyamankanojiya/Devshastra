@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,7 +11,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 import './styles/tech.css';
 
-function App() {
+function AppEffects() {
+  const location = useLocation();
+
   useEffect(() => {
     const els = document.querySelectorAll('[data-reveal]');
     const obs = new IntersectionObserver(
@@ -25,9 +27,10 @@ function App() {
       },
       { threshold: 0.15 }
     );
+
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const nebula = document.querySelector('.nebula-bg');
@@ -68,33 +71,45 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  return null;
+}
+
+function AppShell() {
+  return (
+    <div className="App min-h-screen bg-primary text-text-primary relative overflow-hidden transition-colors duration-300">
+      <AppEffects />
+
+      {/* Animated Background - Managed via CSS classes in index.css */}
+      <div className="nebula-bg">
+        <div className="nebula-orb orb-1"></div>
+        <div className="nebula-orb orb-2"></div>
+        <div className="nebula-orb orb-3"></div>
+      </div>
+      <div className="tech-bg" aria-hidden="true"></div>
+      <div className="tech-scanlines" aria-hidden="true"></div>
+      <div id="scroll-progress" className="scroll-progress" aria-hidden="true" />
+      <div className="noise-overlay" aria-hidden="true"></div>
+
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="App min-h-screen bg-primary text-text-primary relative overflow-hidden transition-colors duration-300">
-          {/* Animated Background - Managed via CSS classes in index.css */}
-          <div className="nebula-bg">
-            <div className="nebula-orb orb-1"></div>
-            <div className="nebula-orb orb-2"></div>
-            <div className="nebula-orb orb-3"></div>
-          </div>
-          <div className="tech-bg" aria-hidden="true"></div>
-          <div className="tech-scanlines" aria-hidden="true"></div>
-          <div id="scroll-progress" className="scroll-progress" aria-hidden="true" />
-          <div className="noise-overlay" aria-hidden="true"></div>
-
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppShell />
       </Router>
     </ThemeProvider>
   );
