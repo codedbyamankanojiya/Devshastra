@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-panel shadow-lg py-2' : 'bg-transparent py-4'
+      className={`fixed w-full z-[70] transition-all duration-300 ${scrolled ? 'glass-panel shadow-lg py-2' : 'bg-transparent py-4'
         }`}
     >
       {isOpen && (
@@ -48,7 +48,7 @@ const Navbar = () => {
           type="button"
           onClick={() => setIsOpen(false)}
           aria-label="Close mobile menu"
-          className="fixed inset-0 z-40 bg-black/40"
+          className="fixed inset-0 z-[60] bg-black/50"
         />
       )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-4">
             <ThemeToggle />
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((v) => !v)}
               className="w-11 h-11 inline-flex items-center justify-center rounded-xl text-text-primary hover:text-accent-primary hover:bg-tertiary transition-colors duration-300 spotlight pressable focus-ring"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
@@ -97,20 +97,23 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed left-0 right-0 top-[76px] z-50 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+        className={`md:hidden fixed inset-0 z-[70] transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
           }`}
       >
-        <div className="px-4 pt-4 pb-4 space-y-2 glass-panel mx-4 rounded-xl border-t-0">
+        <div className="pt-20 px-4 pb-6">
+          <div className="px-4 pt-4 pb-4 space-y-2 glass-panel rounded-xl border-t-0">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
+              onClick={() => setIsOpen(false)}
               className={`block px-4 py-4 rounded-xl text-text-secondary hover:text-accent-primary hover:bg-tertiary transition-all duration-300 spotlight pressable focus-ring ${location.pathname === link.path ? 'text-accent-primary bg-tertiary' : ''
                 }`}
             >
               {link.name}
             </Link>
           ))}
+          </div>
         </div>
       </div>
     </nav>
