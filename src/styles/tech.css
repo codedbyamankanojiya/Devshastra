@@ -5,7 +5,6 @@
   isolation: isolate;
 }
 
-.App nav,
 .App main,
 .App footer {
   position: relative;
