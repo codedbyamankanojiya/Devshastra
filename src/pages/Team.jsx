@@ -35,7 +35,7 @@ const Team = () => {
       specialties: ['Web Dev', 'UI/UX & Design', 'AI & ML', 'IoT & Hardware', 'Cyber Security', 'App Dev'],
       linkedin: 'https://www.linkedin.com/in/aman-kanojiya-7386822b0',
       github: 'https://github.com/codedbyamankanojiya',
-      portfolio: 'https://amankanojiyaportfolio.vercel.app',
+      portfolio: 'https://codedbyamankanojiya.vercel.app',
       bio: 'Leading technical direction. Expert in Web & App Dev, UI/UX, AI/ML/IoT integrations, and Cyber Security.',
     },
     {
@@ -44,7 +44,7 @@ const Team = () => {
       title: 'Co-founder & Treasurer',
       image: AjayImg,
       specialties: ['UI/UX & Design', 'Graphics Design'],
-      linkedin: 'https://www.linkedin.com/in/ajay-patil-a4986b326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      linkedin: 'https://www.linkedin.com/in/ajay-patil-a4986b326',
       github: 'https://github.com/ajaypatil8658',
       bio: 'Pursuing BCA. Focused on graphics design and UI/UX.',
     },
@@ -108,20 +108,20 @@ const Team = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="hero-animated bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-20 border-b border-accent-primary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 data-reveal className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+      <section className="py-16 border-b hero-animated bg-gradient-to-br from-primary via-secondary to-primary md:py-20 border-accent-primary/20">
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h1 data-reveal className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl md:mb-6">
             <span className="title-backdrop">Meet Our <span className="text-gradient">Team</span></span>
           </h1>
-          <p data-reveal className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
+          <p data-reveal className="max-w-3xl mx-auto text-lg md:text-xl text-text-secondary">
             The brilliant minds behind the magic. Our diverse team of experts brings innovation to life.
           </p>
         </div>
       </section>
 
       {/* Filter Buttons */}
-      <section className="sticky top-20 z-40 glass-panel border-b border-accent-primary/20 py-4 md:py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="sticky z-40 py-4 border-b top-20 glass-panel border-accent-primary/20 md:py-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {filters.map((filter) => (
               <button
@@ -141,31 +141,31 @@ const Team = () => {
 
       {/* Team Grid */}
       <section className="py-12 md:py-16 lg:py-20 section-ambient section-divider">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
             {filteredMembers.map((member, index) => (
               <div
                 key={member.id}
-                className="group glass-card rounded-xl overflow-hidden border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-primary/20"
+                className="overflow-hidden transition-all duration-300 transform border group glass-card rounded-xl border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-primary/20"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Member Image */}
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative overflow-hidden h-72">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-top w-full h-full transition-transform duration-500 transform group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-50"></div>
+                  <div className="absolute inset-0 opacity-50 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                   {/* Social Links - Appear on Hover */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute left-0 right-0 flex justify-center space-x-4 transition-opacity duration-300 opacity-0 bottom-4 group-hover:opacity-100">
                     {member.linkedin && member.linkedin !== '#' && (
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
                         <FaLinkedin size={18} />
                       </a>
@@ -175,7 +175,7 @@ const Team = () => {
                         href={member.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
                         <FaGithub size={18} />
                       </a>
@@ -185,7 +185,7 @@ const Team = () => {
                         href={member.portfolio}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center text-white hover:bg-accent-primary/90 transition-colors duration-300"
+                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
                         <FaGlobe size={18} />
                       </a>
@@ -195,18 +195,18 @@ const Team = () => {
 
                 {/* Member Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-text-primary mb-1 group-hover:text-accent-cyan transition-colors duration-300">
+                  <h3 className="mb-1 text-xl font-bold transition-colors duration-300 text-text-primary group-hover:text-accent-cyan">
                     {member.name}
                   </h3>
-                  <p className="text-accent-primary text-sm font-semibold mb-3">{member.title}</p>
-                  <p className="text-text-secondary text-sm mb-4">{member.bio}</p>
+                  <p className="mb-3 text-sm font-semibold text-accent-primary">{member.title}</p>
+                  <p className="mb-4 text-sm text-text-secondary">{member.bio}</p>
 
                   {/* Specialties Tags */}
                   <div className="flex flex-wrap gap-2">
                     {member.specialties.map((specialty, idx) => (
                       <span
                         key={idx}
-                        className="bg-secondary px-3 py-1 rounded-full text-xs text-accent-primary border border-accent-primary/10"
+                        className="px-3 py-1 text-xs border rounded-full bg-secondary text-accent-primary border-accent-primary/10"
                       >
                         {specialty}
                       </span>
@@ -219,8 +219,8 @@ const Team = () => {
 
           {/* No Results Message */}
           {filteredMembers.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-text-secondary text-xl">No team members found for this specialty.</p>
+            <div className="py-20 text-center">
+              <p className="text-xl text-text-secondary">No team members found for this specialty.</p>
             </div>
           )}
         </div>
@@ -228,16 +228,16 @@ const Team = () => {
 
       {/* Join Team CTA */}
       <section className="py-20 bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10 border-y border-dark-tertiary section-ambient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 data-reveal className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+          <h2 data-reveal className="mb-6 text-4xl font-bold md:text-5xl">
             Want to Join Our Team?
           </h2>
-          <p data-reveal className="text-xl text-text-secondary mb-8">
+          <p data-reveal className="mb-8 text-xl text-text-secondary">
             We're always looking for talented individuals who are passionate about technology and innovation.
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-accent-cyan text-dark-bg rounded-lg font-semibold hover:bg-accent-cyan/90 transition-all duration-300 transform hover:scale-105 btn-shine hover-glow w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
+            className="inline-block w-full px-8 py-3 font-semibold transition-all duration-300 transform rounded-lg bg-accent-cyan text-dark-bg hover:bg-accent-cyan/90 hover:scale-105 btn-shine hover-glow sm:w-auto focus:outline-none focus:ring-2 focus:ring-accent-primary/40 active:scale-95"
           >
             Get in Touch
           </a>
