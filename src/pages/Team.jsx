@@ -25,14 +25,14 @@ const Team = () => {
       specialties: ['UI/UX & Design', 'Graphics Design'],
       linkedin: 'https://www.linkedin.com/in/yash-kadam-740992268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       github: 'https://github.com/santa2902',
-      bio: 'Pursuing BCA. Specializes in graphics design and UI/UX.',
+      bio: 'Pursuing BCA. Specializes in Graphic design',
     },
     {
       id: 2,
       name: 'Aman Kanojiya',
       title: 'Co-founder & Team Lead',
       image: AmanImg,
-      specialties: ['Web Dev', 'UI/UX & Design', 'AI & ML', 'IoT & Hardware', 'Cyber Security', 'App Dev'],
+      specialties: ['Web Dev','App Dev', 'UI/UX & Design', 'AI & ML', 'Cyber Security' ],
       linkedin: 'https://www.linkedin.com/in/aman-kanojiya-7386822b0',
       github: 'https://github.com/codedbyamankanojiya',
       portfolio: 'https://codedbyamankanojiya.vercel.app',
@@ -82,12 +82,12 @@ const Team = () => {
     {
       id: 7,
       name: 'Karan Angane',
-      title: 'Web & AIML Developer',
+      title: 'AI/ML Developer',
       image: KaranImg,
       specialties: ['AI & ML', 'IoT & Hardware'],
       linkedin: 'https://www.linkedin.com/in/karan-angane-7a4b60331/',
       github: 'https://github.com/Timepass2117',
-      bio: 'Pursuing BE in CSE AIML. Worked on Arduino mini-projects and currently working on website making.',
+      bio: 'Pursuing B.E in CSE AIML. Worked on Arduino & ESP32 mini-projects.',
     },
   ];
 
