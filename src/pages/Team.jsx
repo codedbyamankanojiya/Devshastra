@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 
 import YashImg from '../assets/Team/Yash.png';
-import AmanImg from '../assets/Team/Aman.png';
+import AmanImg from '../assets/Team/Aman.jpg';
 import AjayImg from '../assets/Team/Ajay.png';
 import AadityaImg from '../assets/Team/Aaditya.jpg';
 import VaishnavImg from '../assets/Team/Vaishnav.png';
