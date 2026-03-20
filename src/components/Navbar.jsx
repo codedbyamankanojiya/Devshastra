@@ -55,9 +55,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group spotlight pressable focus-ring rounded-xl px-2 py-1 -ml-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent-primary/20 spotlight-border">
-              <span className="text-white font-bold text-xl">DS</span>
-            </div>
+            <img
+              src="/Devshastra.png"
+              alt="DevShastra logo"
+              className="h-10 w-auto object-contain select-none drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]"
+              draggable="false"
+            />
             <span className="text-xl font-bold text-text-primary tracking-tight">
               DevShastra <span className="text-accent-primary">Technologies</span>
             </span>
