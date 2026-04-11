@@ -108,26 +108,26 @@ const Team = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-16 border-b hero-animated bg-gradient-to-br from-primary via-secondary to-primary md:py-20 border-accent-primary/20">
+      <section className="py-12 border-b hero-animated bg-gradient-to-br from-primary via-secondary to-primary sm:py-16 md:py-20 border-accent-primary/20">
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-          <h1 data-reveal className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl md:mb-6">
+          <h1 data-reveal className="mb-3 text-2xl font-bold sm:text-3xl md:text-5xl lg:text-6xl sm:mb-4 md:mb-6">
             <span className="title-backdrop">Meet Our <span className="text-gradient">Team</span></span>
           </h1>
-          <p data-reveal className="max-w-3xl mx-auto text-lg md:text-xl text-text-secondary">
+          <p data-reveal className="max-w-3xl mx-auto text-sm sm:text-lg md:text-xl text-text-secondary">
             The brilliant minds behind the magic. Our diverse team of experts brings innovation to life.
           </p>
         </div>
       </section>
 
       {/* Filter Buttons */}
-      <section className="sticky z-40 py-4 border-b top-20 glass-panel border-accent-primary/20 md:py-6">
+      <section className="sticky z-40 py-3 border-b top-20 glass-panel border-accent-primary/20 md:py-6">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+          <div className="flex flex-wrap justify-center gap-1.5 md:gap-3">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 md:px-6 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base whitespace-nowrap ${activeFilter === filter
+                className={`px-2.5 md:px-6 py-1.5 md:py-2 rounded-full font-semibold transition-all duration-300 text-xs md:text-base whitespace-nowrap ${activeFilter === filter
                     ? 'bg-accent-primary text-white shadow-lg shadow-accent-primary/30'
                     : 'bg-secondary text-text-secondary border border-accent-primary/20 hover:border-accent-primary hover:text-accent-primary'
                   }`}
@@ -140,9 +140,9 @@ const Team = () => {
       </section>
 
       {/* Team Grid */}
-      <section className="py-12 md:py-16 lg:py-20 section-ambient section-divider">
+      <section className="py-8 md:py-16 lg:py-20 section-ambient section-divider">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8">
             {filteredMembers.map((member, index) => (
               <div
                 key={member.id}
@@ -150,7 +150,7 @@ const Team = () => {
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Member Image */}
-                <div className="relative overflow-hidden h-72">
+                <div className="relative overflow-hidden h-48 sm:h-56 md:h-64 lg:h-72">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -159,15 +159,15 @@ const Team = () => {
                   <div className="absolute inset-0 opacity-50 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                   {/* Social Links - Appear on Hover */}
-                  <div className="absolute left-0 right-0 flex justify-center space-x-4 transition-opacity duration-300 opacity-0 bottom-4 group-hover:opacity-100">
+                  <div className="absolute left-0 right-0 flex justify-center space-x-2 sm:space-x-4 transition-opacity duration-300 opacity-0 bottom-2 sm:bottom-4 group-hover:opacity-100">
                     {member.linkedin && member.linkedin !== '#' && (
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
+                        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
-                        <FaLinkedin size={18} />
+                        <FaLinkedin size={14} className="sm:size-18" />
                       </a>
                     )}
                     {member.github && member.github !== '#' && (
@@ -175,9 +175,9 @@ const Team = () => {
                         href={member.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
+                        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
-                        <FaGithub size={18} />
+                        <FaGithub size={14} className="sm:size-18" />
                       </a>
                     )}
                     {member.portfolio && member.portfolio !== '#' && (
@@ -185,28 +185,28 @@ const Team = () => {
                         href={member.portfolio}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
+                        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white transition-colors duration-300 rounded-full bg-accent-primary hover:bg-accent-primary/90"
                       >
-                        <FaGlobe size={18} />
+                        <FaGlobe size={14} className="sm:size-18" />
                       </a>
                     )}
                   </div>
                 </div>
 
                 {/* Member Info */}
-                <div className="p-6">
-                  <h3 className="mb-1 text-xl font-bold transition-colors duration-300 text-text-primary group-hover:text-accent-cyan">
+                <div className="p-4 sm:p-6">
+                  <h3 className="mb-1 text-lg sm:text-xl font-bold transition-colors duration-300 text-text-primary group-hover:text-accent-cyan">
                     {member.name}
                   </h3>
-                  <p className="mb-3 text-sm font-semibold text-accent-primary">{member.title}</p>
-                  <p className="mb-4 text-sm text-text-secondary">{member.bio}</p>
+                  <p className="mb-2 sm:mb-3 text-xs sm:text-sm font-semibold text-accent-primary">{member.title}</p>
+                  <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-text-secondary line-clamp-2">{member.bio}</p>
 
                   {/* Specialties Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {member.specialties.map((specialty, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 text-xs border rounded-full bg-secondary text-accent-primary border-accent-primary/10"
+                        className="px-2 py-0.5 sm:px-3 sm:py-1 text-xs border rounded-full bg-secondary text-accent-primary border-accent-primary/10"
                       >
                         {specialty}
                       </span>

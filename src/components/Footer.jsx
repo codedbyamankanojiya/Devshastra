@@ -32,8 +32,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center shadow-lg shadow-accent-cyan/10 hover-tilt">
-                <span className="text-white font-bold text-xl">DS</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-accent-cyan to-accent-purple rounded-lg flex items-center justify-center shadow-lg shadow-accent-cyan/10 hover-tilt p-1">
+                <img 
+                  src="/Favicon.png" 
+                  alt="DevShastra Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-text-primary tracking-tight">DevShastra Technologies</span>
             </div>
