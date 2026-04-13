@@ -146,15 +146,15 @@ const Team = () => {
             {filteredMembers.map((member, index) => (
               <div
                 key={member.id}
-                className="overflow-hidden transition-all duration-300 transform border group glass-card rounded-xl border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-primary/20"
+                className="w-full max-w-[320px] sm:max-w-none mx-auto overflow-hidden transition-all duration-300 transform border group glass-card rounded-xl border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-xl hover:shadow-accent-primary/20"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Member Image */}
-                <div className="relative overflow-hidden h-48 sm:h-56 md:h-64 lg:h-72">
+                <div className="relative overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-60 md:h-64 lg:h-72">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="object-cover object-top w-full h-full transition-transform duration-500 transform group-hover:scale-105"
+                    className="object-cover object-center w-full h-full transition-transform duration-500 transform group-hover:scale-105"
                   />
                   <div className="absolute inset-0 opacity-50 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
